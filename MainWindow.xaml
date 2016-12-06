@@ -23,8 +23,8 @@
         </Border>
         <Border Style="{StaticResource Border}" Grid.Row="1">
             <StackPanel Style="{StaticResource WhitePanel}" Orientation="Vertical">
-                <TextBox Style="{StaticResource TextBox}"></TextBox>
-                <Button Content="Ejecutar" Style="{StaticResource InformButton}"/>
+                <TextBox Name="textBoxExp" Style="{StaticResource TextBox}"></TextBox>
+                <Button Content="Ejecutar" Style="{StaticResource InformButton}" Click="Button_Click"/>
             </StackPanel>
         </Border>
     </Grid>
