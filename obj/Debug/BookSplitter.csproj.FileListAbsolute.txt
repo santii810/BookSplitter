@@ -1,1 +1,16 @@
 C:\Users\Santi\Documents\GitHub\BookSplitter\BookSplitter\bin\Debug\BookSplitter.exe.config
+C:\Users\Santi\Documents\GitHub\BookSplitter\BookSplitter\bin\Debug\BookSplitter.exe
+C:\Users\Santi\Documents\GitHub\BookSplitter\BookSplitter\bin\Debug\BookSplitter.pdb
+C:\Users\Santi\Documents\GitHub\BookSplitter\BookSplitter\obj\Debug\BookSplitter.csprojResolveAssemblyReference.cache
+C:\Users\Santi\Documents\GitHub\BookSplitter\BookSplitter\obj\Debug\MainWindow.g.cs
+C:\Users\Santi\Documents\GitHub\BookSplitter\BookSplitter\obj\Debug\App.g.cs
+C:\Users\Santi\Documents\GitHub\BookSplitter\BookSplitter\obj\Debug\BookSplitter_MarkupCompile.cache
+C:\Users\Santi\Documents\GitHub\BookSplitter\BookSplitter\obj\Debug\BookSplitter_MarkupCompile.lref
+C:\Users\Santi\Documents\GitHub\BookSplitter\BookSplitter\obj\Debug\App.baml
+C:\Users\Santi\Documents\GitHub\BookSplitter\BookSplitter\obj\Debug\Dictionary1.baml
+C:\Users\Santi\Documents\GitHub\BookSplitter\BookSplitter\obj\Debug\MainWindow.baml
+C:\Users\Santi\Documents\GitHub\BookSplitter\BookSplitter\obj\Debug\BookSplitter.g.resources
+C:\Users\Santi\Documents\GitHub\BookSplitter\BookSplitter\obj\Debug\BookSplitter.Properties.Resources.resources
+C:\Users\Santi\Documents\GitHub\BookSplitter\BookSplitter\obj\Debug\BookSplitter.csproj.GenerateResource.Cache
+C:\Users\Santi\Documents\GitHub\BookSplitter\BookSplitter\obj\Debug\BookSplitter.exe
+C:\Users\Santi\Documents\GitHub\BookSplitter\BookSplitter\obj\Debug\BookSplitter.pdb
