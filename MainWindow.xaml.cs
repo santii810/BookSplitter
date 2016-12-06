@@ -33,8 +33,17 @@ namespace BookSplitter
             InitializeComponent();
         }
 
+        private void reset()
+        {
+            this.labelLibro.Content = "";
+            fichero = null;
+            lineasLibro.Clear();
+            textBoxExp.Clear();
+        }
+
         private void ButtonSeleccionarLibro_Click(object sender, RoutedEventArgs e)
         {
+            reset();
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.ShowDialog();
             if (!String.IsNullOrEmpty(ofd.FileName))
