@@ -16,6 +16,12 @@
         <Setter Property="FontFamily" Value="Tempus Sans ITC"/>
     </Style>
 
+    <Style x:Key="TextBox" TargetType="{x:Type TextBox}">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="FontFamily" Value="Tempus Sans ITC"/>
+        <Setter Property="Margin" Value="15"/>
+        <Setter Property="Width" Value="180"/>
+    </Style>
 
     <!--#region boton-->
     <Style x:Key="MyFocusVisual">
