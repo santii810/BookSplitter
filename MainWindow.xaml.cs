@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -68,8 +69,9 @@ namespace BookSplitter
                         }
                     
                     }
-                    gestor.writeFile(fichero.Directory.ToString() + @"\splitted_" +fichero.Name + fichero.Extension  , lineasLibro);
-
+                    string fileName = fichero.Directory.ToString() + @"\splitted_" + fichero.Name;
+                    gestor.writeFile(fileName , lineasLibro);
+                    Process.Start(fileName);
 
 
                 }
