@@ -5,19 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookSplitter"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="200" ResizeMode="NoResize" Background="#FF003289">
+        Title="MainWindow" Height="400" Width="300" ResizeMode="NoResize" Background="#FF003289">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="200"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="300"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="300"/>
         </Grid.ColumnDefinitions>
-
-        <StackPanel Style="{StaticResource WhitePanel}">
-            
-        </StackPanel>
+        <Border Style="{StaticResource Border}">
+            <StackPanel Style="{StaticResource WhitePanel}" Orientation="Vertical">
+                <Button Content=" Seleccionar Libro"   Margin="10" Click="ButtonSeleccionarLibro_Click" HorizontalAlignment="Center" Style="{StaticResource InformButton}"/>
+                <Label Name="labelLibro" Content="" Margin="10" HorizontalAlignment="Center" Style="{StaticResource Label}" Width="200"/>
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>

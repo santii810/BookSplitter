@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +22,24 @@ namespace BookSplitter
     /// </summary>
     public partial class MainWindow : Window
     {
+        FileInfo fichero;
+        GestorFicheros gestor = new GestorFicheros();
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ButtonSeleccionarLibro_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.ShowDialog();
+            if (!String.IsNullOrEmpty(ofd.FileName))
+            {
+                fichero = new FileInfo(ofd.FileName);
+                this.labelLibro.Content = fichero.Name;
+                gestor.nombreFichero = fichero.FullName;
+            }
         }
     }
 }
