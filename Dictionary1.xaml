@@ -8,7 +8,9 @@
     <Style x:Key="Border" TargetType="{x:Type Border}">
         <Setter Property="BorderBrush" Value="Black"/>
         <Setter Property="BorderThickness" Value="2"/>
-        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Margin" Value="5,5,10,5"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+
     </Style>
 
     <Style x:Key="Label" TargetType="{x:Type Label}">

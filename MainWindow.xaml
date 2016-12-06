@@ -5,23 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookSplitter"
         mc:Ignorable="d"
-        Title="BookSplitter" Height="250" Width="300" ResizeMode="NoResize" Background="#FF003289">
+        Title="BookSplitter" Height="280" Width="300" ResizeMode="NoResize" Background="#FF003289">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
-            <RowDefinition Height="120"/>
+            <RowDefinition Height="150"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="300"/>
         </Grid.ColumnDefinitions>
-        <Border Style="{StaticResource Border}">
+        <Border Style="{StaticResource Border}"  Width="280">
             <StackPanel Style="{StaticResource WhitePanel}" Orientation="Vertical">
                 <Button Content=" Seleccionar Libro"   Margin="10" Click="ButtonSeleccionarLibro_Click" HorizontalAlignment="Center" Style="{StaticResource InformButton}"/>
-                <Label Name="labelLibro" Content="hola" Style="{StaticResource Label}" Width="200"/>
+                <Label Name="labelLibro" Style="{StaticResource Label}" Width="200"/>
             </StackPanel>
         </Border>
-        <Border Style="{StaticResource Border}" Grid.Row="1">
+        <Border Style="{StaticResource Border}" Grid.Row="1" Width="280">
             <StackPanel Style="{StaticResource WhitePanel}" Orientation="Vertical">
                 <TextBox Name="textBoxExp" Style="{StaticResource TextBox}"></TextBox>
                 <Button Content="Ejecutar" Style="{StaticResource InformButton}" Click="Button_Click"/>
