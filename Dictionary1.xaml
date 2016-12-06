@@ -1,5 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:BookSplitter">
-    
+    <Style x:Key="WhitePanel" TargetType="{x:Type StackPanel}">
+        <Setter Property="Background" Value="White"/>
+    </Style>
 </ResourceDictionary>

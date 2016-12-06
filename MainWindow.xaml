@@ -16,7 +16,7 @@
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel>
+        <StackPanel Style="{StaticResource WhitePanel}">
             
         </StackPanel>
     </Grid>
