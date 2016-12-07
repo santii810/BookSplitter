@@ -27,6 +27,7 @@ namespace BookSplitter
         FileInfo fichero;
         GestorFicheros gestor = new GestorFicheros();
         public List<string> lineasLibro = new List<string>();
+        private bool ficheroSeleccionado;
 
         public MainWindow()
         {
@@ -36,6 +37,7 @@ namespace BookSplitter
         private void reset()
         {
             this.labelLibro.Content = "";
+            ficheroSeleccionado = false;
             fichero = null;
             lineasLibro.Clear();
             textBoxExp.Clear();
@@ -48,6 +50,7 @@ namespace BookSplitter
             ofd.ShowDialog();
             if (!String.IsNullOrEmpty(ofd.FileName))
             {
+                ficheroSeleccionado = true;
                 fichero = new FileInfo(ofd.FileName);
                 this.labelLibro.Content = fichero.Name;
                 gestor.nombreFichero = fichero.FullName;
@@ -57,29 +60,32 @@ namespace BookSplitter
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (String.IsNullOrEmpty(fichero.Name))
+            if (!ficheroSeleccionado)
             {
                 MessageBox.Show("Fichero no seleccionado");
             }
             else
             {
                 string exp = textBoxExp.Text;
+                int max;
+                int.TryParse(textBoxMaxChar.Text, out max);
+                if (max == 0) max = 50;
                 if (!String.IsNullOrEmpty(exp))
                 {
                     Regex regex = new Regex(exp);
                     for (int i = 0; i < lineasLibro.Count; i++)
                     {
                         string linea = lineasLibro[i];
-                        
-                        if (regex.IsMatch(linea))
+
+                        if (regex.IsMatch(linea) && linea.Length<=max)
                         {
                             lineasLibro.Insert(i, "---");
                             i++;
                         }
-                    
+
                     }
                     string fileName = fichero.Directory.ToString() + @"\splitted_" + fichero.Name;
-                    gestor.writeFile(fileName , lineasLibro);
+                    gestor.writeFile(fileName, lineasLibro);
                     Process.Start(fileName);
 
 

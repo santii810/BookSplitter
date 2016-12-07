@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookSplitter"
         mc:Ignorable="d"
-        Title="BookSplitter" Height="280" Width="300" ResizeMode="NoResize" Background="#FF003289">
+        Title="BookSplitter" Height="275" Width="310" ResizeMode="NoResize" Background="#FF003289">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
-            <RowDefinition Height="150"/>
+            <RowDefinition Height="130"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -23,8 +23,24 @@
         </Border>
         <Border Style="{StaticResource Border}" Grid.Row="1" Width="280">
             <StackPanel Style="{StaticResource WhitePanel}" Orientation="Vertical">
-                <TextBox Name="textBoxExp" Style="{StaticResource TextBox}"></TextBox>
-                <Button Content="Ejecutar" Style="{StaticResource InformButton}" Click="Button_Click"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Content="Expresion" />
+                    <Label Content="Max. Char." Grid.Row="1"/>
+                    <TextBox Name="textBoxExp" Style="{StaticResource TextBox}" Grid.Column="1"></TextBox>
+                    <TextBox Name="textBoxMaxChar"   Style="{StaticResource TextBox}" Grid.Row="1" Grid.Column="1"></TextBox>
+                    <Button Content="Ejecutar" Style="{StaticResource InformButton}" Click="Button_Click" Grid.Row="2" Grid.ColumnSpan="2"/>
+                </Grid>
             </StackPanel>
         </Border>
     </Grid>
